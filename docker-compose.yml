@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: protocolbridge
+      POSTGRES_PASSWORD: protocolbridge
+      POSTGRES_DB: protocolbridge
+    ports:
+      - "55432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U protocolbridge -d protocolbridge"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - protocolbridge_postgres:/var/lib/postgresql/data
+
+volumes:
+  protocolbridge_postgres:

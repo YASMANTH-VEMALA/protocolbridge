@@ -1,0 +1,29 @@
+{
+  "name": "protocolbridge",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.23.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @protocolbridge/database db:generate",
+    "db:migrate": "pnpm --filter @protocolbridge/database db:migrate",
+    "db:deploy": "pnpm --filter @protocolbridge/database db:deploy",
+    "db:seed": "pnpm --filter @protocolbridge/database db:seed"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "26.3.0",
+    "eslint": "9.39.5",
+    "turbo": "2.10.11",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.68.0",
+    "vitest": "4.1.11"
+  }
+}

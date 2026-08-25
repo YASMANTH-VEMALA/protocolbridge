@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+.npm-cache/
+.turbo/
+.corepack-cache/
+.tools-bin/
+dist/
+.next/
+coverage/
+*.tsbuildinfo
+.env
+.env.local
+*.log
+packages/database/prisma/dev.db

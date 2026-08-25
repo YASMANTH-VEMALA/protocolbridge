@@ -1,0 +1,21 @@
+{
+  "name": "@protocolbridge/auth",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src --max-warnings=0",
+    "test": "vitest run src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "2.1.0",
+    "jsonwebtoken": "9.0.3",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "9.0.10"
+  }
+}
